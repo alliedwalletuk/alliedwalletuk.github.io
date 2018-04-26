@@ -1,0 +1,18 @@
+tet,ttt
+Your payment has been successfully processed by our shop system.,Your payment has been successfully processed by our shop system.
+"Please click <a href=%s"">here</a> if you are not redirected automatically.""","Please click <a href=%s"">here</a> if you are not redirected automatically."""
+Customer was redirected to AlliedWallet.,Customer was redirected to AlliedWallet.
+authorize:Customer returned successfully,The amount has been preauthorized by AlliedWallet.
+authorize_capture:Customer returned successfully,The amount has been authorized and captured by AlliedWallet.
+Customer was rejected by AlliedWallet,Customer was rejected by AlliedWallet
+Error occured,Error occured
+"Please <a href=""%s"">continue shopping</a>.","Please <a href=""%s"">continue shopping</a>."
+AlliedWallet Transaction ID: %s,AlliedWallet Transaction ID: %s
+est,yesy
+Shopping basket,Shopping basket
+Payment has not been processed yet.," ""Payment has not been processed yet."""
+Authorization,Authorization
+Preauthorization,Preauthorization
+Your purchase at,Your purchase at
+,
+englisch,

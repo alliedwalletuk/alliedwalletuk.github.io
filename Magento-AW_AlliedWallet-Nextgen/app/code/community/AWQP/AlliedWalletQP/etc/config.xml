@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category   design_default
+ * @package    AW_AlliedWallet
+ * @copyright  Copyright (c) 2008 Allied Wallet (http://www.alliedwallet.com)
+ */
+-->
+<config>
+    <modules>
+        <AWQP_AlliedWalletQP>
+            <version>0.9.0</version>
+        </AWQP_AlliedWalletQP>
+    </modules>
+    <global>
+        <models>
+            <alliedwalletqp>
+                <class>AWQP_AlliedWalletQP_Model</class>
+            </alliedwalletqp>
+        </models>
+        <helpers>
+	      <alliedwalletqp>
+            <class>AWQP_AlliedWalletQP_Helper</class>
+		  </alliedwalletqp>
+	    </helpers>
+        <resources>
+            <alliedwalletqp_setup>
+                <setup>
+                    <module>AWQP_AlliedWalletQP</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </alliedwalletqp_setup>
+            <alliedwalletqp_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </alliedwalletqp_write>
+            <alliedwalletqp_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </alliedwalletqp_read>
+        </resources>
+        <blocks>
+            <alliedwalletqp><class>AWQP_AlliedWalletQP_Block</class></alliedwalletqp>
+        </blocks>
+        <payment>
+        	<url>https://www.alliedwallet.com/</url>
+            <transaction>
+                <modes>
+                    <LIVE>
+                        <code>live</code>
+                        <name>Live mode</name>
+                    </LIVE>
+                    <TEST>
+                    	<code>test</code>
+                    	<name>Test mode</name>
+                    </TEST>
+                </modes>
+            </transaction>
+        </payment>
+    </global>
+    <frontend>
+        <routers>
+            <alliedwalletqp>
+                <use>standard</use>
+                <args>
+                    <module>AWQP_AlliedWalletQP</module>
+                    <frontName>alliedwalletqp</frontName>
+                </args>
+            </alliedwalletqp>
+        </routers>
+        <translate>
+            <modules>
+                <AWQP_AlliedWalletQP>
+                    <files>
+                        <default>AWQP_AlliedWalletQP.csv</default>
+                    </files>
+                </AWQP_AlliedWalletQP>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <alliedwalletqp>
+                    <file>alliedwalletqp.xml</file>
+                </alliedwalletqp>
+            </updates>
+        </layout>
+    </frontend>
+    <adminhtml>
+        <translate>
+            <modules>
+                <AWQP_AlliedWalletQP>
+                    <files>
+                        <default>AWQP_AlliedWalletQP.csv</default>
+                    </files>
+                </AWQP_AlliedWalletQP>
+            </modules>
+        </translate>
+    </adminhtml>
+	<default>
+        <payment>        
+            <alliedwalletqp_cc>
+                <active>0</active>
+                <model>alliedwalletqp/cc</model>
+                <order_status>1</order_status>
+                <title>Credit Card (AlliedWallet)</title>
+                <allowspecific>0</allowspecific>
+                <request_type>authorize</request_type>
+				<transaction_mode>test</transaction_mode>
+				<fix_contact>1</fix_contact>
+				<hide_contact>0</hide_contact>
+            </alliedwalletqp_cc>
+        </payment>
+    </default> 
+</config>

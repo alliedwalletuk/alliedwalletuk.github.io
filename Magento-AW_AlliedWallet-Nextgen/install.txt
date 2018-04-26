@@ -1,0 +1,9 @@
+Steps to Install:- (Note: This module is test on Magento v1.1.6)
+
+1). Unzip files to Magento installation root directory .
+2). Goto Admin > Configuration > Payment Methods .
+3). Select "AlliedWallet Credit Card"
+	a). Set Enable Module to "Yes".
+	b). Fill MerchantID, SiteID and other info.
+4). Save Info.
+Done ... !!
